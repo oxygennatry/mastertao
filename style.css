@@ -81,7 +81,7 @@ top: 370px;
 
 .mainhead {
     background-color: #282b38;
-height: 8000px;
+height: calc(-64.7vw + 8);
 padding: 0 calc(3.3vw + 7.5px);
 
 }
