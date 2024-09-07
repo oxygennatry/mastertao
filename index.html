@@ -114,9 +114,14 @@
 
       <h2 class="delevyry">Получить рассчет стоимости доставки вашего груза</h2>
       <div class="formImg">
-      <div class="formTransport">
+        <div class="formTransport">
+          
         <form action="" class="formmain">
-
+          <div class="circle">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+          </div>
          
           <div class="formPole">
             <span>Категория товара:</span>
@@ -194,7 +199,8 @@
           <img src="./КАРТИНКИ/8.svg" alt="" />
         </div>
       </div>
-
+<div class="sliderVanish">
+  <h3 class="none">Почему стоит выбрать именно нас?</h3>
       <div class="splide" id="splideroll" role="group" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
           <ul class="splide__list">
@@ -209,7 +215,7 @@
           </ul>
         </div>
       </div>
-      
+      </div>
             
 
 
@@ -298,9 +304,97 @@
 
 
 
-
+<!-- 
       <h3 class="h3">Часто задаваемые вопросы</h3>
-      <div class="questions">
+      
+        <div class="accordion">
+    
+          <article class="choose">
+            <input id="article1" type="radio" name="articles" checked>
+            <label for="article1">
+              <h2>Как рассчитывается стоимость доставки?</h2>
+            </label>
+            <div>
+              <p>
+                Да, мы предоставляем такую услугу, мы можем взять оплату товара
+                в Китае на себя. Если у вас нет валютного счёта, то можете
+                оплатить товар в рублях на наш счет в России.
+              </p>
+            </div>
+          </article>
+        
+          <article class="choose">
+            <input id="article2" type="radio" name="articles">
+            <label for="article2">
+              <h2>Как происходит оплата за доставку груза?</h2>
+            </label>
+            <div>
+              <p>
+                Да, мы предоставляем такую услугу, мы можем взять оплату товара
+                в Китае на себя. Если у вас нет валютного счёта, то можете
+                оплатить товар в рублях на наш счет в России.
+              </p>
+            </div>
+          </article>
+        
+          <article class="choose">
+            <input id="article3" type="radio" name="articles">
+            <label for="article3">
+              <h2>Как быстро оформить заказ на доставку из Китая в Россию?</h2>
+            </label>
+            <div>
+              <p>
+                Да, мы предоставляем такую услугу, мы можем взять оплату товара
+                в Китае на себя. Если у вас нет валютного счёта, то можете
+                оплатить товар в рублях на наш счет в России.
+              </p>
+            </div>
+          </article>
+        
+          <article class="choose">
+            <input id="article4" type="radio" name="articles">
+            <label for="article4">
+              <h2>Можно ли через вас оплатить товар поставщику?</h2>
+            </label>
+            <div>
+              <p>
+              Да, мы предоставляем такую услугу, мы можем взять оплату товара
+              в Китае на себя. Если у вас нет валютного счёта, то можете
+              оплатить товар в рублях на наш счет в России.
+            </p>
+            </div>
+          </article>
+
+          <article class="choose">
+            <input id="article5" type="radio" name="articles">
+            <label for="article5">
+              <h2>В чём особенность КАРГО доставки из Китая</h2>
+            </label>
+            <div>
+              <p>
+                Да, мы предоставляем такую услугу, мы можем взять оплату товара
+                в Китае на себя. Если у вас нет валютного счёта, то можете
+                оплатить товар в рублях на наш счет в России.
+              </p>
+            </div>
+          </article>
+
+          <article class="choose">
+            <input id="article6" type="radio" name="articles">
+            <label for="article6">
+              <h2>Какой срок доставки из Китая?</h2>
+            </label>
+            <div>
+              <p>
+                Да, мы предоставляем такую услугу, мы можем взять оплату товара
+                в Китае на себя. Если у вас нет валютного счёта, то можете
+                оплатить товар в рублях на наш счет в России.
+              </p>
+            </div>
+          </article>
+        
+        </div> -->
+        <div class="questions">
         <div class="question">
           <div class="choose">
             <span>Как рассчитывается стоимость доставки?</span
@@ -329,7 +423,7 @@
           <div class="choose">
             <span>Какой срок доставки из Китая?</span><img src="./КАРТИНКИ/arrow-circle-left 1.svg" alt="" class="imgarrow"/>
           </div>
-        </div>
+        </div> 
 
 
           <div class="formquestions">
@@ -444,12 +538,16 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        var splide = new Splide(".splide");
+        var splide = new Splide(".splide",{
+          pagination: { active: true }
+        }
+        );
         splide.mount();
       });
 
       document.addEventListener("DOMContentLoaded", function () {
         var splide = new Splide("#splideroll", {
+          
           width: '375px' ,
           perPage: 1,
         });
